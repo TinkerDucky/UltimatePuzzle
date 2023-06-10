@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhq5b4ld232pt"]
+
+[ext_resource type="Texture2D" uid="uid://bk5l2iy7o8ttr" path="res://assets/kenney_pixel-platformer-blocks/Tiles/Marble/tile_0002.png" id="1_338xm"]
+[ext_resource type="Script" path="res://Sprite2D.gd" id="1_jc5f1"]
+[ext_resource type="Texture2D" uid="uid://bb0q6m4lgrh4l" path="res://assets/kenney_pixel-platformer-blocks/Tiles/Rock/tile_0028.png" id="3_aqys4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_abkm5"]
+radius = 13.0671
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hglv"]
+size = Vector2(17.0647, 15.75)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(1, 52)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(50, 53)
+can_sleep = false
+freeze_mode = 1
+linear_velocity = Vector2(1, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(159, 89)
+scale = Vector2(14.518, 14.518)
+shape = SubResource("CircleShape2D_abkm5")
+debug_color = Color(0.74902, 0.462745, 0, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D/CollisionShape2D"]
+position = Vector2(0.177609, 0.0710435)
+texture = ExtResource("1_338xm")
+script = ExtResource("1_jc5f1")
+metadata/_edit_lock_ = true
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2(488, 555)
+mass = 1000.0
+inertia = 1000.0
+gravity_scale = 2.66454e-15
+can_sleep = false
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+position = Vector2(-30.8027, -48.8729)
+rotation = 0.179769
+scale = Vector2(56.204, 3.646)
+shape = SubResource("RectangleShape2D_7hglv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="RigidBody2D2/CollisionShape2D"]
+position = Vector2(-0.0468864, -1.43717)
+scale = Vector2(0.954037, 1)
+texture = ExtResource("3_aqys4")
+metadata/_edit_lock_ = true
