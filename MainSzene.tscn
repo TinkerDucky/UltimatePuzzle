@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0j1f11ypekg3"]
+
+[ext_resource type="Script" path="res://Grid.gd" id="1_y3ofk"]
+[ext_resource type="Texture2D" path="res://kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_04.png" id="2_8m3e3"]
+[ext_resource type="Texture2D" path="res://kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_05.png" id="3_3y668"]
+[ext_resource type="Texture2D" path="res://kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_06.png" id="4_n8mc6"]
+
+[sub_resource type="TileSet" id="TileSet_hr2ns"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Grid" type="TileMap" parent="."]
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_hr2ns")
+cell_quadrant_size = 64
+format = 2
+script = ExtResource("1_y3ofk")
+
+[node name="TileBlue05" type="Sprite2D" parent="Grid"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_8m3e3")
+
+[node name="TileBlue06" type="Sprite2D" parent="Grid"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_3y668")
+
+[node name="TileBlue07" type="Sprite2D" parent="Grid"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_3y668")
+
+[node name="TileBlue08" type="Sprite2D" parent="Grid"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_3y668")
+
+[node name="TileBlue09" type="Sprite2D" parent="Grid"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_n8mc6")
+
+[node name="TileBlue04" type="Sprite2D" parent="Grid"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_8m3e3")
+
+[node name="TileBlue10" type="Sprite2D" parent="Grid"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_3y668")
+
+[node name="TileBlue11" type="Sprite2D" parent="Grid"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_3y668")
+
+[node name="TileBlue12" type="Sprite2D" parent="Grid"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_3y668")
+
+[node name="TileBlue13" type="Sprite2D" parent="Grid"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_n8mc6")
