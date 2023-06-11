@@ -49,7 +49,7 @@ func _input(event):
 				cursorPos = [cursorPos[0], cursorPos[1] - gridSize]
 				return
 		#Change into object_list Mode
-		elif event.is_action_pressed("Mode_selection"):
+		elif event.is_action_pressed("mode_selection"):
 			print("Mode Change")
 			cursorPos = [1024, 0]
 			mode_selection_bool= true
@@ -73,10 +73,14 @@ func _input(event):
 				cursorPos = [cursorPos[0], cursorPos[1] - 2 * gridSize]
 				return
 		#Change into Gameboard Mode
-		if event.is_action_pressed("Mode_selection"):
+		if event.is_action_pressed("mode_selection"):
 			cursorPos = Vector2(0, 0)
 			mode_selection_bool = false
-
+		#Object will be selected and will be moved in position
+		if event.is_action_pressed("object_selection"):
+			get_node("Main/Object0").transformation = Vector2(0, 0) #Objekt auswählen und Position verschieben auf (0, 0)
+			#Object0 = Vector2(0,0)#Danach in Modus für Objekt verschieben auf dem Gameboard
+								
 		self.position = Vector2(cursorPos[0], cursorPos[1])
 			
 			
