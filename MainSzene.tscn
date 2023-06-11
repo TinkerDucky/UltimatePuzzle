@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpparklg0p4u7"]
+
+[ext_resource type="Texture2D" uid="uid://cl6yrsn7d1act" path="res://assets/grid/placeholder.png" id="1_sygd2"]
+[ext_resource type="Script" path="res://Grid.gd" id="1_y3ofk"]
+[ext_resource type="Texture2D" uid="uid://dwjqyb1hd5vth" path="res://assets/grid/cursor.png" id="2_despg"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_sygd2")
+offset = Vector2(640, 512)
+
+[node name="Cursor" type="Sprite2D" parent="Sprite2D"]
+texture = ExtResource("2_despg")
+offset = Vector2(16, 16)
+script = ExtResource("1_y3ofk")
