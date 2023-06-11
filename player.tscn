@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cn5jmmr3uvaeh"]
+[gd_scene load_steps=21 format=3 uid="uid://d24y81vjnbixi"]
 
 [ext_resource type="Texture2D" uid="uid://6mtgaa3swwgq" path="res://assets/grid/player_placeholder.png" id="1_3qk2f"]
 [ext_resource type="Script" path="res://player.gd" id="1_re405"]
@@ -120,7 +120,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e65i4"]
-size = Vector2(37, 20)
+size = Vector2(52.5, 27)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(32, 32)
@@ -141,7 +141,7 @@ sprite_frames = SubResource("SpriteFrames_3413b")
 animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(30.5, 32)
+position = Vector2(34.75, 32)
 shape = SubResource("RectangleShape2D_e65i4")
 
 [connection signal="body_entered" from="RigidBody2D" to="." method="_on_rigid_body_2d_body_entered"]

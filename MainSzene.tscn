@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cpparklg0p4u7"]
+[gd_scene load_steps=7 format=3 uid="uid://bry0juo1sw23v"]
 
 [ext_resource type="Script" path="res://GameLoop.gd" id="1_rlve1"]
 [ext_resource type="Texture2D" uid="uid://cl6yrsn7d1act" path="res://assets/grid/placeholder.png" id="1_sygd2"]
 [ext_resource type="Script" path="res://Grid.gd" id="1_y3ofk"]
 [ext_resource type="Texture2D" uid="uid://dwjqyb1hd5vth" path="res://assets/grid/cursor.png" id="2_despg"]
-[ext_resource type="PackedScene" uid="uid://cn5jmmr3uvaeh" path="res://player.tscn" id="6_flc4n"]
-[ext_resource type="PackedScene" uid="uid://d0mg0o2ith35a" path="res://static_rect.tscn" id="7_mxi1g"]
+[ext_resource type="PackedScene" uid="uid://d24y81vjnbixi" path="res://player.tscn" id="6_flc4n"]
+[ext_resource type="PackedScene" uid="uid://bpy0slipbop40" path="res://static_rect.tscn" id="7_mxi1g"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_rlve1")
@@ -24,6 +24,20 @@ script = ExtResource("1_y3ofk")
 [node name="Node2D" parent="Sprite2D" instance=ExtResource("6_flc4n")]
 
 [node name="Static_Rect" parent="Sprite2D" instance=ExtResource("7_mxi1g")]
-position = Vector2(127, 1024)
-rotation = -1.57079
+position = Vector2(229, 511)
+rotation = -1.56381
 scale = Vector2(8, 1)
+
+[node name="Static_Rect2" parent="Sprite2D" instance=ExtResource("7_mxi1g")]
+position = Vector2(-33250, 832)
+rotation = -0.0593412
+scale = Vector2(64, 1)
+
+[node name="Static_Rect3" parent="Sprite2D" instance=ExtResource("7_mxi1g")]
+position = Vector2(-33138, 826)
+scale = Vector2(4096, 1)
+
+[node name="Static_Rect4" parent="Sprite2D" instance=ExtResource("7_mxi1g")]
+position = Vector2(32, 224)
+rotation = 1.5708
+scale = Vector2(4096, 1)
