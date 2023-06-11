@@ -11,8 +11,6 @@ extends Sprite2D
 var gridSize = 32
 var cursorPos = [0, 0]
 var mode_selection_bool = false
-#var excess_length = 3 * gridSize - gridSize
-var excess_length = get_node("Object_List").get_children(false)[0].transform.scale.x / gridSize - gridSize
 #je nach Baustein in x und y Achse?
 var objectPos = [0, 0]
 var object_movement = false
@@ -31,6 +29,9 @@ func _process(delta):
 
 #Cursor movement function
 func _input(event):
+	
+	var excess_length = get_node("Object_List").get_children(false)[0].size.x - gridSize
+	
 	if(cursor_movement == true):
 	#if(1 == 1):
 		#Boolean statement to switch between modes
