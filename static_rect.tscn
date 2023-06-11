@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0mg0o2ith35a"]
+
+[ext_resource type="Texture2D" uid="uid://dga0a4kffvyxn" path="res://assets/grid/tile_placeholder.png" id="1_nflse"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jpxn6"]
+friction = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cju25"]
+size = Vector2(128, 32)
+
+[node name="Static_Rect" type="Node2D"]
+
+[node name="Rectangle_Rigid2D" type="RigidBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_jpxn6")
+max_contacts_reported = 1
+contact_monitor = true
+freeze = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Rectangle_Rigid2D"]
+position = Vector2(64, 16)
+scale = Vector2(4, 1)
+texture = ExtResource("1_nflse")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rectangle_Rigid2D"]
+position = Vector2(64, 16)
+shape = SubResource("RectangleShape2D_cju25")

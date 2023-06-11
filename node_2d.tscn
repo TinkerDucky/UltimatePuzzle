@@ -40,7 +40,7 @@ can_sleep = false
 freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
-position = Vector2(-30.8027, -48.8729)
+position = Vector2(57, -106)
 rotation = 0.179769
 scale = Vector2(56.204, 3.646)
 shape = SubResource("RectangleShape2D_7hglv")
